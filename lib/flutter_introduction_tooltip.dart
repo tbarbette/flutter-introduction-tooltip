@@ -196,6 +196,7 @@ class FlutterIntroductionTooltip {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
+                    title != null?
                     Text(
                       title,
                       textAlign: TextAlign.center,
@@ -203,7 +204,7 @@ class FlutterIntroductionTooltip {
                           .of(context)
                           .textTheme
                           .display2,
-                    ),
+                    ):Container(),
                     Padding(
                       padding: EdgeInsets.only(
                           bottom: 8.0),
@@ -364,13 +365,14 @@ class FlutterIntroductionTooltip {
                 ),
                 child: Column(
                   children: <Widget>[
+                    title != null?
                     Text(
                       title,
                       style: Theme
                           .of(context)
                           .textTheme
                           .display2,
-                    ),
+                    ):Container(),
                     Padding(
                       padding: EdgeInsets.only(
                           bottom: 8.0),
